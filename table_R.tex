@@ -1,11 +1,12 @@
+%!TEX root=record.tex
 \begin{table}[H]
 	    \caption{Коэффициент Холла}
 	    \label{tab:diod}
 	    \pgfkeys{/pgf/number format/.cd,
 		fixed,  1000 sep={\,}}
-% \newlength\Colsep
+\newlength\Colsep
 \setlength\Colsep{10pt}
-\xdef\Table{data/table_R.dat}
+\xdef\Table{data/i.tsv}
 \pgfplotstableset{
 	multicolumn names, % allows to have multicolumn names
 	col sep=tab, % the seperator in our .csv file
@@ -25,9 +26,10 @@
 	},		
 	columns/ubp8/.style={
 		column name={$u5$, с},
+	},
 	columns/ubm8/.style={
 		column name={$u6$, с},
-
+	},
 	empty cells with={\textbf{--}},
 	every head row/.style={
 	before row={\toprule},
@@ -36,22 +38,14 @@
 		},
 	every last row/.style={after row=\bottomrule},
 	every row/.style={after row=\midrule}, 
-	columns={R,t,n,T},		
+	columns={ubp2,ubm2,ubp5,ubm5,ubp8,ubm8	},		
 	dec sep align,
 	% dec zerofill
 	% fixed,fixed zerofill,
 	% precision=2
 	}
-	% \centering
-	 %    \pgfplotstabletypeset[
-		% % skip rows between index={0}{50},
-		% skip rows between index={25}{500},
-	 %    ]{\Table}
+
 \centering
-\noindent\begin{minipage}[c][][c]{1.1\textwidth}
-\begin{minipage}[t][][b]{0.5\textwidth}
-	    \pgfplotstabletypeset[
-		% skip rows between index={0}{50},
-		skip rows between index={5}{10},
-	    ]{\Table}
-\end{minipage}%\hfill
+	\pgfplotstabletypeset[]{\Table}
+
+\end{table}
