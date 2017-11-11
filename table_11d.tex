@@ -1,0 +1,112 @@
+%!TEX root=record.tex
+\begin{table}[H]
+	    \caption{Коэффициент Холла}
+	    \label{tab:diod}
+	    \pgfkeys{/pgf/number format/.cd,
+		fixed,  1000 sep={\,}}
+% \newlength\Colsep
+\setlength\Colsep{10pt}
+\xdef\Table{data/11.tsv}
+\pgfplotstableset{
+	% multicolumn names, % allows to have multicolumn names
+	% header=has colnames,
+	dec sep align,
+	col sep=tab, % the seperator in our .csv file
+	fixed zerofill, 
+	precision=4,
+	columns/i/.style={
+		column name={$i$, А},
+		precision=1,		
+	},	
+	columns/d650p/.style={
+		column name={$\Delta U|_{650^{+} \text{ Гс}}$, В},
+	},
+	columns/d650m/.style={
+		column name={$\Delta U|_{650^{-} \text{ Гс}}$, В},
+	},	
+	columns/d1500p/.style={
+		column name={$\Delta U|_{1500^{+} \text{ Гс}}$, В},
+	},
+	columns/d1500m/.style={
+		column name={$\Delta U|_{1500^{-} \text{ Гс}}$, В},
+	},		
+	empty cells with={\textbf{--}},
+	every head row/.style={
+	before row={\toprule},
+	after row={
+		\midrule}
+		},
+	every last row/.style={after row=\bottomrule},
+	every row/.style={after row=\midrule}, 
+	columns={i,d650p,d650m,d1500p,d1500m},		
+	% dec zerofill
+	% fixed,fixed zerofill,
+	% precision=3
+	every even column/.style={
+		% column type/.add={>{\columncolor[gray]{.8}}}{}
+	},
+	every even row/.style={
+		before row={\rowcolor[gray]{0.95}}
+	},	
+	}
+
+\centering
+	\pgfplotstabletypeset[]{\Table}
+
+\end{table}
+
+\begin{table}[H]
+	    % \caption{Коэффициент Холла}
+	    \label{tab:diod}
+	    \pgfkeys{/pgf/number format/.cd,
+		fixed,  1000 sep={\,}}
+% \newlength\Colsep
+% \setlength\Colsep{10pt}
+\xdef\Table{data/11.tsv}
+\pgfplotstableset{
+	% multicolumn names, % allows to have multicolumn names
+	% header=has colnames,
+	dec sep align,
+	col sep=tab, % the seperator in our .csv file
+	fixed zerofill, 
+	precision=4,
+	columns/i/.style={
+		column name={$i$, А},
+		precision=1,		
+	},	
+	columns/d2000p/.style={
+		column name={$\Delta U|_{2000^{+} \text{ Гс}}$, В},
+	},
+	columns/d2000m/.style={
+		column name={$\Delta U|_{2000^{-} \text{ Гс}}$, В},
+	},
+	columns/d2400p/.style={
+		column name={$\Delta U|_{2400^{+} \text{ Гс}}$, В},
+	},
+	columns/d2400m/.style={
+		column name={$\Delta U|_{2400^{-} \text{ Гс}}$, В},
+	},	
+	empty cells with={\textbf{--}},
+	every head row/.style={
+	before row={\toprule},
+	after row={
+		\midrule}
+		},
+	every last row/.style={after row=\bottomrule},
+	every row/.style={after row=\midrule}, 
+	columns={i,d2000p,d2000m,d2400p,d2400m},		
+	% dec zerofill
+	% fixed,fixed zerofill,
+	% precision=3
+	every even column/.style={
+		% column type/.add={>{\columncolor[gray]{.8}}}{}
+	},
+	every even row/.style={
+		before row={\rowcolor[gray]{0.95}}
+	},	
+	}
+
+\centering
+	\pgfplotstabletypeset[]{\Table}
+
+\end{table}
