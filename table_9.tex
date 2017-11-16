@@ -1,12 +1,12 @@
 %!TEX root=record.tex
 \begin{table}[H]
-	    \caption{Коэффициент Холла}
+	    \caption{Зависимость $U_{34}(B)$}
 	    \label{tab:diod}
 	    \pgfkeys{/pgf/number format/.cd,
 		fixed,  1000 sep={\,}}
 \newlength\Colsep
 \setlength\Colsep{10pt}
-\xdef\Table{data/i.tsv}
+% \xdef\Table{data/i.tsv}
 \pgfplotstableset{
 	% multicolumn names, % allows to have multicolumn names
 	% header=has colnames,
@@ -60,6 +60,6 @@
 	}
 
 \centering
-	\pgfplotstabletypeset[]{\Table}
+	\pgfplotstabletypeset[]{data/i.tsv}
 
 \end{table}

@@ -1,5 +1,5 @@
 \input{text/diss}
-
+\usepackage{colortbl}
 \begin{document}
 
 \def\labauthors{Понур К.А., Сарафанов Ф.Г., Сидоров Д.А.}
@@ -200,10 +200,65 @@ v=\frac{I}{qnS}=\frac{j}{qn}=\frac{\sigma E}{qn}
 
 \section{Экспериментальные данные}
 \subsection{Вольт-амперная характеристика участка $R_{56}$}
+
+Была снята зависимость разности потенциалов контктов 5 и 6 от
+величины тока в отсутствие магнитного поля В. Измерения проведены для
+двух направлений тока при изменении его величины от О до 10 мА. 
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/vax}
 	\caption{ВАХ элемента}
 	\label{fig:vax}
 \end{figure}
+
+Из графика определено сопротивление участка $R_{56}$:
+\begin{equation}
+	R_{56}=(237\pm 2) \text{ Ом}
+\end{equation}
+
+Используя данные о поперечных размерах образца, расстоянии между контактами и значении $R_{56}$, можно вычислить удельную электрическую проводимость полупроводника в единицах $\text{Ом}^{-1}\text{см}^{-1}$.
+\begin{equation}
+	\sigma=\frac{1}{\rho} =\frac{l_{56}}{R_{56} \cdot S}=\frac{d}{R_{56}\cdot bc}=\frac{0.96}{237\cdot 0.48\cdot 0.102}=0.0827 \text{ Ом}^{-1}\text{см}^{-1}
+\end{equation}
+
+\subsection{Определение знака холловской разности потенциалов}
+
+При установленном токе в образце $J^{+}=5$ мА измерена разность потенциалов между
+контактами 3-4 при выключенном магнитном поле и при поле $B^{+}=2000$ Гс:
+\begin{equation}
+	\Delta\varphi|_{B=0}=0.0297 \text{ В}
+\end{equation}
+\begin{equation}
+	\Delta\varphi|_{B=2000+ \text{Гс}}=0.0063 \text{ В}
+\end{equation}
+По результатам измерений определен знак и величина холловской разности потенциалов:
+\begin{equation}
+	U_H=\Delta\varphi|_{B=2000+ \text{Гс}}-\Delta\varphi|_{B=0}=0.0063-0.0297=-0.0234 \text{ В}
+\end{equation}
+а также знак основных носителей заряда в образце - положительный, значит носителями заряда являются дырки.
+
+\subsection{Определение коэффициента Холла}
+\subsubsection{Определение зависимости $U^B_{34}(B)|{J=const}$}
+Установив ток в образце ${J=2\,\text{мА}}$, Сняли зависимость разности потенциалов $U_{34}$ от величины поля $B$. Измерения проведены  при изменении тока $i$ в обмотках электромагнита 0 до 1 А с шагом 0.1 А. Эксперимент повторили для ${J=5\,\text{мА}}$, ${J=8\,\text{мА}}$.
+
+\input{table_9}
+
+\subsubsection{Определение зависимости $U_{H}(J)|{B=const}$}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.79\textwidth]{img/UHp}
+	\caption{}
+	\label{fig:uhp}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.79\textwidth]{img/UHm}
+	\caption{}
+	\label{fig:uhm}
+\end{figure}
+
+Для поля
+
 \end{document}

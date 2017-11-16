@@ -30,23 +30,24 @@
 		    ytick distance=0.01,
 		    % ymax = 1.8,
 		    xmin = 0,
-		    ymin = 0,
+		    % ymin = 0,
 		    % xmax = 40,
 		    % ticklabel style={font=\tiny,fill=white},    
 		    axis lines=middle, 	
 		    % xlabel style={right, xshift=1em},
 		    % ylabel style={above},	
 		    x label style={at={(axis description cs:0.5,-0.08)},anchor=north},
-		    y label style={at={(axis description cs:-0.08,.5)},rotate=90,anchor=south}		    	    		
+		    y label style={at={(axis description cs:-0.08,.5)},rotate=90,anchor=south}	,
+		     y dir=reverse	    	    		
 			% legend style={
 			% at={(rel axis cs:0,1)},
 			% anchor=north west,draw=none,inner sep=0pt,fill=gray!10}
 		]
 
-		\addplot +[mark=*, mark size=1.2pt, mark color=blue, only marks] plot [error bars/.cd, y dir = both, y explicit] table [x=i, y=d650p] {../data/11.tsv};
-		\addplot +[mark=*, mark size=1.2pt, mark color=blue, only marks] plot [error bars/.cd, y dir = both, y explicit] table [x=i, y=d1500p] {../data/11.tsv};
-		\addplot +[mark=*, mark size=1.2pt, mark color=blue, only marks] plot [error bars/.cd, y dir = both, y explicit] table [x=i, y=d2000p] {../data/11.tsv};
-		\addplot +[mark=*, mark size=1.2pt, mark color=blue, only marks] plot [error bars/.cd, y dir = both, y explicit] table [x=i, y=d2400p] {../data/11.tsv};
+		\addplot +[mark=*, mark size=1.2pt, mark color=blue, only marks] plot [error bars/.cd, y dir = both, y explicit] table [x=i, y=d650m] {../data/11.tsv};
+		\addplot +[mark=*, mark size=1.2pt, mark color=blue, only marks] plot [error bars/.cd, y dir = both, y explicit] table [x=i, y=d1500m] {../data/11.tsv};
+		\addplot +[mark=*, mark size=1.2pt, mark color=blue, only marks] plot [error bars/.cd, y dir = both, y explicit] table [x=i, y=d2000m] {../data/11.tsv};
+		\addplot +[mark=*, mark size=1.2pt, mark color=blue, only marks] plot [error bars/.cd, y dir = both, y explicit] table [x=i, y=d2400m] {../data/11.tsv};
 
 		% {0/,1/,2/,3/d2400p} {
 		        
@@ -59,12 +60,12 @@
 
 
 	     % \addplot [samples=100, domain=0:10, blue] {x*0.01/4.3};
-	     \addplot [samples=100, domain=0:10, blue] {x*0.002315};
-	     
-	     \addplot [samples=100, domain=0:10, red] {x*0.01/1.77};
-	     \addplot [samples=100, domain=0:10, red] {x*0.01/1.77};
-	     \addplot [samples=100, domain=0:10, brown] {x*0.01/1.33};
-	     \addplot [samples=100, domain=0:10, black] {x*0.01/1.14};
+	     \addplot [samples=100, domain=0:10, blue] {-x*0.002315};
+
+	     \addplot [samples=100, domain=0:10, red] {-x*0.01/1.77};
+	     \addplot [samples=100, domain=0:10, red] {-x*0.01/1.77};
+	     \addplot [samples=100, domain=0:10, brown] {-x*0.01/1.33};
+	     \addplot [samples=100, domain=0:10, black] {-x*0.01/1.14};
 	        % \addplot [samples=100, domain=106.5:240] {(x-106.5)/12.43};
 	        % \addplot [samples=100, line width=1pt, dashed, domain=0:10] {(x-0.15)*2.37/10};
 	        % \addlegendentry{Аппроксимация}
