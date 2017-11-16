@@ -7,11 +7,20 @@
 \fancyfoot{} 
 \fancyfoot[C]{\thepage} 
 \usepackage{colortbl}
+\usepackage{lscape}
+\usepackage{booktabs,array}
+\newcolumntype{C}{>{\centering\arraybackslash}m{5em}}
 \begin{document} 
-
+ \newgeometry{left=1.5cm,right=1.5cm, top=3cm,bottom=3cm}
+\begin{landscape}
 \input{table_9}
-\newpage
 \input{table_11}
+\end{landscape}
+\newpage
+\restoregeometry
+\begin{landscape}
+\end{landscape}
+
 \newpage
 \input{table_11d}
 \begin{figure}[H]
