@@ -18,7 +18,7 @@
 			% ymin=0,
 			% ymax=5,
 			xlabel={$J$, мА},
-			ylabel={$U_H$, В},
+			ylabel={$U_{34}$, В},
 			tick style={very thick},
 		    % scale=0.5,
 		    grid=both,
@@ -30,7 +30,7 @@
 		    ytick distance=0.01,
 		    % ymax = 1.8,
 		    xmin = 0,
-		    % ymin = 0,
+		    ymax = 0,
 		    % xmax = 40,
 		    % ticklabel style={font=\tiny,fill=white},    
 		    axis lines=middle, 	
@@ -44,29 +44,29 @@
 			% anchor=north west,draw=none,inner sep=0pt,fill=gray!10}
 		]
 
-		\addplot +[mark=*, mark size=1.2pt, mark color=blue, only marks] plot [error bars/.cd, y dir = both, y explicit] table [x=i, y=d650m] {../data/11.tsv};
-		\addplot +[mark=*, mark size=1.2pt, mark color=blue, only marks] plot [error bars/.cd, y dir = both, y explicit] table [x=i, y=d1500m] {../data/11.tsv};
-		\addplot +[mark=*, mark size=1.2pt, mark color=blue, only marks] plot [error bars/.cd, y dir = both, y explicit] table [x=i, y=d2000m] {../data/11.tsv};
-		\addplot +[mark=*, mark size=1.2pt, mark color=blue, only marks] plot [error bars/.cd, y dir = both, y explicit] table [x=i, y=d2400m] {../data/11.tsv};
+		% \addplot +[mark=*, mark size=1.2pt, mark color=blue, only marks] plot [error bars/.cd, y dir = both, y explicit] table [x=i, y=d650m] {../data/11.tsv};
+		% \addplot +[mark=*, mark size=1.2pt, mark color=blue, only marks] plot [error bars/.cd, y dir = both, y explicit] table [x=i, y=d1500m] {../data/11.tsv};
+		% \addplot +[mark=*, mark size=1.2pt, mark color=blue, only marks] plot [error bars/.cd, y dir = both, y explicit] table [x=i, y=d2000m] {../data/11.tsv};
+		% \addplot +[mark=*, mark size=1.2pt, mark color=blue, only marks] plot [error bars/.cd, y dir = both, y explicit] table [x=i, y=d2400m] {../data/11.tsv};
 
 		% {0/,1/,2/,3/d2400p} {
 		        
 
 
-		% \addplot +[mark=*, mark size=1.2pt, only marks] plot [error bars/.cd, y dir = both, y explicit] table [x=i, y=b0m] {../data/11.tsv};
+		\addplot +[mark=*, mark size=1.2pt, only marks] plot [error bars/.cd, y dir = both, y explicit] table [x=i, y=b0p] {../data/11.tsv};
 
 
 	        % \addplot +[mark=*, mark size=1.2pt, mark color=red, only marks] plot [error bars/.cd, y dir = both, y explicit] table [x=i, y=d] {../data/11.tsv};
 	        % \addlegendentry{$U_c=-7$ В}
 
 
-	     % \addplot [samples=100, domain=0:10, blue] {x*0.01/4.3};
-	     \addplot [samples=100, domain=0:10, blue] {-x*0.002315};
+	     \addplot [samples=100, domain=0:10, blue] {-0.006137*x+0.0005967};
+	     % \addplot [samples=100, domain=0:10, blue] {-x*0.002315};
 
-	     \addplot [samples=100, domain=0:10, red] {-x*0.01/1.77};
-	     \addplot [samples=100, domain=0:10, red] {-x*0.01/1.77};
-	     \addplot [samples=100, domain=0:10, brown] {-x*0.01/1.33};
-	     \addplot [samples=100, domain=0:10, black] {-x*0.01/1.14};
+	     % \addplot [samples=100, domain=0:10, red] {-x*0.01/1.77};
+	     % \addplot [samples=100, domain=0:10, red] {-x*0.01/1.77};
+	     % \addplot [samples=100, domain=0:10, brown] {-x*0.01/1.33};
+	     % \addplot [samples=100, domain=0:10, black] {-x*0.01/1.14};
 	        % \addplot [samples=100, domain=106.5:240] {(x-106.5)/12.43};
 	        % \addplot [samples=100, line width=1pt, dashed, domain=0:10] {(x-0.15)*2.37/10};
 	        % \addlegendentry{Аппроксимация}

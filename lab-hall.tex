@@ -201,9 +201,9 @@ v=\frac{I}{qnS}=\frac{j}{qn}=\frac{\sigma E}{qn}
 \section{Экспериментальные данные}
 \subsection{Вольт-амперная характеристика участка $R_{56}$}
 
-Была снята зависимость разности потенциалов контктов 5 и 6 от
+Была снята зависимость разности потенциалов контактов 5 и 6 от
 величины тока в отсутствие магнитного поля В. Измерения проведены для
-двух направлений тока при изменении его величины от О до 10 мА. 
+двух направлений тока при изменении его величины от 0 до 10 мА. 
 
 \begin{figure}[H]
 	\centering
@@ -239,26 +239,186 @@ v=\frac{I}{qnS}=\frac{j}{qn}=\frac{\sigma E}{qn}
 а также знак основных носителей заряда в образце - положительный, значит носителями заряда являются дырки.
 
 \subsection{Определение коэффициента Холла}
-\subsubsection{Определение зависимости $U^B_{34}(B)|{J=const}$}
-Установив ток в образце ${J=2\,\text{мА}}$, Сняли зависимость разности потенциалов $U_{34}$ от величины поля $B$. Измерения проведены  при изменении тока $i$ в обмотках электромагнита 0 до 1 А с шагом 0.1 А. Эксперимент повторили для ${J=5\,\text{мА}}$, ${J=8\,\text{мА}}$.
+\subsubsection{Определение зависимости $U^B_{34}(B)|_{J=const}$}
+Установив ток в образце ${J=2\,\text{мА}}$, Сняли зависимость разности потенциалов $U^B_{34}$ от величины поля $B$. Измерения проведены  при изменении тока $i$ в обмотках электромагнита 0 до 1 А с шагом 0.1 А. Эксперимент повторили для ${J=5\,\text{мА}}$, ${J=8\,\text{мА}}$.
 
 \input{table_9}
 
-\subsubsection{Определение зависимости $U_{H}(J)|{B=const}$}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.79\textwidth]{img/UHp}
-	\caption{}
+	\includegraphics[width=0.89\textwidth]{img/n10m}
+	% \caption{}
 	\label{fig:uhp}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.79\textwidth]{img/UHm}
-	\caption{}
+	\includegraphics[width=0.79\textwidth]{img/n10p}
+	% \caption{}
 	\label{fig:uhm}
 \end{figure}
 
-Для поля
+Для трех токов нашли угловой коэффициент:
+\begin{equation}
+	\frac{U_H}{B}\bigg|_{J=2\text{ мА}}=0.68\cdot10^{-2}\ \frac{\text{мВ}}{\text{Гс}},\quad
+	\frac{U_H}{B}\bigg|_{J=5\text{ мА}}=1.83\cdot10^{-2}\ \frac{\text{мВ}}{\text{Гс}},\quad
+	\frac{U_H}{B}\bigg|_{J=8\text{ мА}}=3\cdot10^{-2}\ \frac{\text{мВ}}{\text{Гс}}
+\end{equation}
+
+Отсюда
+\begin{equation}
+	R=\frac{U_H}{B}\frac{c}{J}=0.68\cdot10^{-2}\ \frac{\text{мВ}}{\text{Гс}}\cdot \frac{0.102\text{ см}}{8 \text{ мА}}\cdot 10^8=
+	0.68\cdot10^{-2}\cdot \frac{0.102}{2}\cdot 10^8=34680\ \frac{\text{см}^3}{\text{Кл}}
+\end{equation}
+Аналогично
+\begin{equation}
+	R=1.83\cdot10^{-2}\cdot \frac{0.102}{5}\cdot 10^8=37332\ \frac{\text{см}^3}{\text{Кл}}
+\end{equation}
+\begin{equation}
+	R=3\cdot10^{-2}\cdot \frac{0.102}{8}\cdot 10^8=38250\ \frac{\text{см}^3}{\text{Кл}}
+\end{equation}
+
+\subsubsection{Определение зависимости $U_{H}(J)|_{B=const}$}
+
+Сняли зависимость $U_{H}(J)|_{B=const}$. Измерения провели при выключенном
+магнитном поле, а затем при четырех различных значениях $B^{+}$.
+Нашли угловой коэффициент:
+\begin{gather}
+	\frac{U_H}{J}\bigg|_{B=650\text{ Гс}}=2.315\ \frac{\text{мВ}}{\text{мА}},\quad
+	\frac{U_H}{J}\bigg|_{B=1500\text{ Гс}}=5.696\ \frac{\text{мВ}}{\text{мА}},\\
+	\frac{U_H}{J}\bigg|_{B=2000\text{ Гс}}=7.622\ \frac{\text{мВ}}{\text{мА}},\quad
+	\frac{U_H}{J}\bigg|_{B=2400\text{ Гс}}=8.886\ \frac{\text{мВ}}{\text{мА}}
+\end{gather}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.79\textwidth]{img/UHp}
+	% \caption{}
+	\label{fig:uhp}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.79\textwidth]{img/UHm}
+	% \caption{}
+	\label{fig:uhm}
+\end{figure}
+Отсюда
+\begin{equation}
+	R=\frac{U_H}{J}\frac{c}{B}=2.315\ \frac{\text{мВ}}{\text{мА}}\cdot \frac{0.102\text{ см}}{650 \text{ Гс}}\cdot 10^8=
+	2.315\cdot \frac{0.102}{650}\cdot 10^8=36327\ \frac{\text{см}^3}{\text{Кл}}
+\end{equation}
+Аналогично
+\begin{equation}
+	R=5.696\cdot \frac{0.102}{1500}\cdot 10^8=38732\ \frac{\text{см}^3}{\text{Кл}}
+\end{equation}
+\begin{equation}
+	R=7.622\cdot \frac{0.102}{2000}\cdot 10^8=38872\ \frac{\text{см}^3}{\text{Кл}}
+\end{equation}
+\begin{equation}
+	R=8.886\cdot \frac{0.102}{2400}\cdot 10^8=37765\ \frac{\text{см}^3}{\text{Кл}}
+\end{equation}
+
+Среднее значение $R$ по всем экспериментам
+\begin{equation}
+	R\equiv\mean{R}=37400\ \frac{\text{см}^3}{\text{Кл}}
+\end{equation}
+
+\subsubsection{Определение сопротивления участка $R_{34}$}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.79\textwidth]{img/U34}
+	% \caption{}
+	\label{fig:uhm}
+\end{figure}
+Из графика $U_{34}(J)|_{B=0}$ нашли сопротивление $R_{34}$ как угловой коэффициент:
+\begin{equation}
+	R_{34}=6.137\ \frac{\text{мВ}}{\text{мА}}=6.137 \text{ Ом}
+\end{equation}
+Тогда можем найти смещение:
+\begin{equation}
+	\Delta x=bc\cdot R_{34}\cdot \sigma=0.48\cdot0.102\cdot6.137\cdot 0.0827=0.025 \text{ cм}
+\end{equation}
+
+\subsection{Определение холловской подвижности и угла Холла}
+
+Найдем холловскую подвижность:
+\begin{equation}
+	\mu_H=R\sigma=37400\cdot0.0827=3092\ \frac{\text{см}^2}{\text{Кл}\cdot \text{Ом}}
+\end{equation}
+\begin{equation}
+	\mu_H=0.3\ \frac{\text{м}^2}{\text{Кл}\cdot \text{Ом}}
+\end{equation}
+
+Проверим условие слабого поля. В нашем случае поле порядка 3000 Гс (0.3 Тл):
+\begin{equation}
+	\mu_H\cdot B=0.3\cdot0.3=0.09 \ll 1
+\end{equation}
+
+Для поля 2000 Гс можем найти угол Холла:
+\begin{equation}
+	\vartheta\approx-\mu_H\cdot B=-0.3\cdot0.2=-0.06
+\end{equation}
+
+\subsection{Определение концентрации носителей}
+
+Оценим концентрацию носителей по формуле
+\begin{equation}
+	n=\frac{\gamma}{Rq}
+\end{equation}
+Здесь $\gamma$ -- холл-фактор, учитывающий механизм рассеяния свободных носителей заряда, для используемого образца $\gamma=1.18$:
+\begin{equation}
+	n=\frac{1.18\cdot10^{19}}{37400\cdot1.6}=1.97\cdot10^{14}
+\end{equation}
+
+\newpage
+\section{Заключение}
+
+В ходе данной работы была снята зависимость разности потенциалов контактов 5 и 6 от
+величины тока в отсутствие магнитного поля В. Определено сопротивление участка $R_{56}$:
+\begin{equation}
+	R_{56}=(237\pm 2) \text{ Ом}
+\end{equation}
+
+Вычислена удельная электрическая проводимость полупроводника
+\begin{equation}
+	\sigma=0.0827 \text{ Ом}^{-1}\text{см}^{-1}
+\end{equation}
+
+Определен знак и величина холловской разности потенциалов, а также знак основных носителей заряда в образце: положительный -- значит, носителями заряда являются дырки.
+
+Сняли зависимость разности потенциалов $U^B_{34}$ от величины поля $B$.
+Так же сняли зависимость $U_{H}(J)|_{B=const}$.
+
+Анализом графиков получили среднее значение коэффициента Холла $R$
+\begin{equation}
+	R\equiv\mean{R}=37400\ \frac{\text{см}^3}{\text{Кл}}
+\end{equation}
+
+Из графика $U_{34}(J)|_{B=0}$ нашли сопротивление $R_{34}$ как угловой коэффициент:
+\begin{equation}
+	R_{34}=6.137 \text{ Ом}
+\end{equation}
+
+Нашли смещение контактов:
+\begin{equation}
+	\Delta x=0.025 \text{ cм}
+\end{equation}
+
+Определили холловскую подвижность
+\begin{equation}
+	\mu_H=0.3\ \frac{\text{м}^2}{\text{Кл}\cdot \text{Ом}}
+\end{equation}
+
+Для поля 2000 Гс нашли угол Холла:
+\begin{equation}
+	\vartheta=-0.06
+\end{equation}
+
+Оценили концентрацию свободных носителей
+\begin{equation}
+	n=1.97\cdot10^{14}
+\end{equation}
+
+% В ходе данной работы был определен коэффициент Холла $\frac{\text{см^3}}{\text{Кл}}$. Был найден угол Холла при $B=2000\text{Гс}\phi=0.17$ и подвижность $ \mu_H=0.3092 $ 
+% Также мы выяснили, что полупроводник обладает дырочной проводимостью и нашли концентрацию носителей заряда в образце.
 
 \end{document}

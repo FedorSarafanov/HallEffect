@@ -1,0 +1,82 @@
+\documentclass[tikz]{standalone}
+\usepackage{cmap}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{pgfplots}
+\begin{document}
+	\begin{tikzpicture}
+		    \begin{axis}[
+			grid=both,
+			scale=1.5,
+			% xmode=log,
+			grid style={line width=.1pt, draw=gray!10},
+			major grid style={line width=.2pt,draw=gray!50},
+			% axis lines=middle,
+			minor tick num=5,
+			% xmin=1000, 
+			% xmax=11,
+			% ymin=0,
+			% ymax=5,
+			xlabel={$B$, Гс},
+			ylabel={$U$, В},
+			tick style={very thick},
+		    % scale=0.5,
+		    grid=both,
+		    grid style={line width=1pt, draw=black!20},
+		    major grid style={line width=.5pt,draw=black!90},
+		    minor y tick num=4,
+		    minor x tick num=4,   
+		    xtick distance=500,
+		    % ytick distance=0.25,
+		    % ymax = ,
+		    xmin = 0,
+		    % ymax = 0,
+		    % xmax = 40,
+		    % ticklabel style={font=\tiny,fill=white},    
+		    axis lines=middle, 	
+		    % xlabel style={right, xshift=1em},
+		    % ylabel style={above},	
+		    x label style={at={(axis description cs:0.5,-0.04)},anchor=north},
+		    y label style={at={(axis description cs:-0.08,.5)},rotate=90,anchor=south},	
+		    restrict x to domain=0:2800,
+		    restrict y to domain=-1:1,
+		     % y dir=reverse,
+			% legend style={
+			% at={(rel axis cs:0,1)},
+			% anchor=north west,draw=none,inner sep=0pt,fill=gray!10}
+		]
+	        \addplot +[mark=*, mark size=1.2pt, only marks]  table [x=b, y=ubp5] {../data/i.tsv};	     
+	        \addplot +[mark=*, mark size=1.2pt, only marks]  table [x=b, y=ubp2] {../data/i.tsv};
+	        \addplot +[mark=*, mark size=1.2pt, only marks]  table [x=b, y=ubp8] {../data/i.tsv};	
+	        \addplot [samples=100, red, line width=1pt, domain=0:2800] {(\x*6.86e-06)-0.01068};
+
+	        \addplot [samples=100, blue, line width=1pt, domain=0:2800] {(\x*1.83e-05)-0.02867};
+
+	        \addplot [samples=100, brown, line width=1pt, domain=0:2800] {(\x*3.002e-05)-0.04708};
+
+	        % \addplot +[mark=*, mark size=1.2pt, mark color=magenta, only marks] plot [error bars/.cd, y dir = both, y explicit] table [x=i, y=um] {../data/i.tsv};
+	        % \addlegendentry{$U_c=-7$ В}
+
+	        % \addplot [samples=100, line width=1pt, dashed, domain=0:10] {(x-0.15)*2.37/10};
+	        % \addplot [samples=100, line width=1pt, dashed, domain=0:10] {(x-0.15)*2.35/10};
+	        % \addlegendentry{Аппроксимация}
+
+	        % \addplot [samples=100, domain=0:52, dashdotdotted] {0.05215*e^(-(x-27)^2/2/(7.649)^2)};
+	        % \addlegendentry{$\sigma_k=7.649$}
+
+% 	        >
+% 	        General model:
+%      f(x) = (x-x0)/r0
+% Coefficients (with 95% confidence bounds):
+%        r0 =       12.38  (12.29, 12.47)
+%        x0 =       109.2  (108.7, 109.7)
+
+% Goodness of fit:
+%   SSE: 0.3017
+%   R-square: 0.9993
+%   Adjusted R-square: 0.9993
+%   RMSE: 0.07768
+
+		    \end{axis}
+		\end{tikzpicture}	
+\end{document}

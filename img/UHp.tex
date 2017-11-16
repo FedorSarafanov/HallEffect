@@ -18,7 +18,7 @@
 			% ymin=0,
 			% ymax=5,
 			xlabel={$J$, мА},
-			ylabel={$U$, В},
+			ylabel={$U_H$, В},
 			tick style={very thick},
 		    % scale=0.5,
 		    grid=both,
@@ -29,8 +29,8 @@
 		    xtick distance=1,
 		    ytick distance=0.01,
 		    % ymax = 1.8,
-		    xmin = 0,
-		    ymin = 0,
+		    % xmin = 0,
+		    % ymin = 0,
 		    % xmax = 40,
 		    % ticklabel style={font=\tiny,fill=white},    
 		    axis lines=middle, 	
@@ -43,6 +43,9 @@
 			% anchor=north west,draw=none,inner sep=0pt,fill=gray!10}
 		]
 
+
+
+		
 		\addplot +[mark=*, mark size=1.2pt, mark color=blue, only marks] plot [error bars/.cd, y dir = both, y explicit] table [x=i, y=d650p] {../data/11.tsv};
 		\addplot +[mark=*, mark size=1.2pt, mark color=blue, only marks] plot [error bars/.cd, y dir = both, y explicit] table [x=i, y=d1500p] {../data/11.tsv};
 		\addplot +[mark=*, mark size=1.2pt, mark color=blue, only marks] plot [error bars/.cd, y dir = both, y explicit] table [x=i, y=d2000p] {../data/11.tsv};
@@ -67,6 +70,7 @@
 	     \addplot [samples=100, domain=0:10, black] {x*0.01/1.14};
 	        % \addplot [samples=100, domain=106.5:240] {(x-106.5)/12.43};
 	        % \addplot [samples=100, line width=1pt, dashed, domain=0:10] {(x-0.15)*2.37/10};
+		% \addplot +[mark=*, mark size=1.2pt, only marks] plot [error bars/.cd, y dir = both, y explicit] table [x=i, y=b0p] {../data/11.tsv};
 	        % \addlegendentry{Аппроксимация}
 
 	        % \addplot [samples=100, domain=0:52, dashdotdotted] {0.05215*e^(-(x-27)^2/2/(7.649)^2)};
